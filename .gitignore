@@ -1,0 +1,8 @@
+# ignnore package fuiles Project-local glide cache
+.idea/
+
+# ignore ide files
+.vscode
+
+# ignore Services Store file for macOS
+.DS_Store/
