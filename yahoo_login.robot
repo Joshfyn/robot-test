@@ -1,7 +1,6 @@
 *** Settings ***
-Documentation               Test suite to navigate to facebook login page
+Documentation               Test suite to navigate to yahoo login page
 Library                     SeleniumLibrary
-
 
 *** Variables ***
 
@@ -10,7 +9,7 @@ Library                     SeleniumLibrary
 
 
 *** Test Cases ***
-Verify User Can Navigate To Facebook Login Page
+Verify User Can Navigate To Yahoo Login Page
     [Documentation]         Opens browser and navigates to the login page
     [Tags]                  regression      Smoke
-    Open Browser            https://www.facebook.com/           chrome
+    Open Browser            https://mail.yahoo.com/d/folders/1           chrome
