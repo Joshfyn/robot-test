@@ -15,8 +15,14 @@ ${search_field}             //b/following-sibling::form//input[@type='text' and 
 ${click_search}             //b/following-sibling::form//input[@type='submit']
 ${Num_2_page}               //label/following-sibling::input[@type='submit']
 
+${registration_link}        //a[@href='/register']
+${email_field}              //input[@name='email']
+${submit_btn}               //input[@type='submit' and @value='Submit']
+${invalid_message}          //h2[text()]
+
 # Text
 ${var_immi}                 immigrant
+${invalid_email}            seyeKennygmail.in
 
 *** Keywords ***
 
@@ -39,4 +45,19 @@ Verify User Can Navigate To NairaLand Page and Search
     Wait Until Element Is Visible       ${Num_2_page}
     [Teardown]    Close Browser
 
+Verify User Cannot Register On NairaLand Registration Using Invalid Email Address
+    [Documentation]         Verifies a user cannot register on the nairaland registeration page using invalid email
+    [Tags]                  smoke
+    # Preconditions - Open the web browser and navigate to the registration page
+    # Steps to Reproduce or execute
+        # 1. Provide invalid email
+        # 2. click on submit
+    # expected result
+        # 1. failed registration
+        Open Browser            ${naira_URL}        ${browser}
+        Click Element           ${registration_link}
+        Input Text              ${email_field}      ${invalid_email}
+        Click Element           ${submit_btn}
+        Wait Until Element Contains     ${invalid_message}         Invalid email address
+        [Teardown]    Close Browser
 
