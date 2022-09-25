@@ -6,3 +6,6 @@
 
 # ignore Services Store file for macOS
 .DS_Store/
+
+
+/result
