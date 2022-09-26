@@ -1,21 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220926 21:30:02.935" rpa="false" schemaversion="3">
-<suite id="s1" name="NL loginpagetest" source="C:\Users\bebes\OneDrive\Desktop\Sheye IT Projects\robot-test\NL_loginpagetest.robot">
-<test id="s1-t1" name="Verify user can easily navigate to nairaland login page" line="17">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220927 00:50:53.740" rpa="false" schemaversion="3">
+<suite id="s1" name="NL resetpassword" source="C:\Users\bebes\OneDrive\Desktop\Sheye IT Projects\robot-test\NL_resetpassword.robot">
+<test id="s1-t1" name="Verify user cannot reset password using invalid email address" line="29">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${Nlogin_URL}</arg>
+<arg>${NL_URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220926 21:30:04.619" level="INFO">Opening browser 'chrome' to base url 'https://www.nairaland.com/login'.</msg>
-<status status="PASS" starttime="20220926 21:30:04.618" endtime="20220926 21:30:20.767"/>
+<msg timestamp="20220927 00:50:54.942" level="INFO">Opening browser 'chrome' to base url 'https://www.nairaland.com/'.</msg>
+<status status="PASS" starttime="20220927 00:50:54.941" endtime="20220927 00:51:11.757"/>
 </kw>
-<doc>Opens browser and navigates easily to login page</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220927 00:51:11.864" level="INFO">Clicking element '//*[@id="up"]/tbody/tr/td/a[1]'.</msg>
+<status status="PASS" starttime="20220927 00:51:11.862" endtime="20220927 00:51:14.539"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Email_field}</arg>
+<arg>${invalid_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220927 00:51:14.823" level="INFO">Typing text 'bebes4sure"gmail.com' into text field '//input [@name='email']'.</msg>
+<status status="PASS" starttime="20220927 00:51:14.793" endtime="20220927 00:51:16.041"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${submit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220927 00:51:16.139" level="INFO">Clicking element '//input [@type='submit' and @value='Submit']'.</msg>
+<status status="PASS" starttime="20220927 00:51:16.138" endtime="20220927 00:51:17.460"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${invalid_message}</arg>
+<arg>The email was not found.</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220927 00:51:17.466" endtime="20220927 00:51:18.659"/>
+</kw>
+<doc>verifies a user cannot reset password using invalid email</doc>
 <tag>regression</tag>
 <tag>smoke</tag>
-<status status="PASS" starttime="20220926 21:30:04.615" endtime="20220926 21:30:20.780"/>
+<status status="PASS" starttime="20220927 00:50:54.938" endtime="20220927 00:51:18.742"/>
 </test>
-<doc>To test ease of navigation to nairaland login page</doc>
-<status status="PASS" starttime="20220926 21:30:02.946" endtime="20220926 21:30:20.783"/>
+<doc>To ascertain that Invalid email will fail nairaland reset operation</doc>
+<status status="PASS" starttime="20220927 00:50:53.760" endtime="20220927 00:51:18.746"/>
 </suite>
 <statistics>
 <total>
@@ -26,7 +51,7 @@
 <stat pass="1" fail="0" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="NL loginpagetest">NL loginpagetest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="NL resetpassword">NL resetpassword</stat>
 </suite>
 </statistics>
 <errors>
