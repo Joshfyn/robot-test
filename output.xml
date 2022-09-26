@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220926 00:01:38.126" rpa="false" schemaversion="3">
+<suite id="s1" name="NL Check" source="C:\Users\bebes\OneDrive\Desktop\Sheye IT Projects\robot-test\NL_Check.robot">
+<test id="s1-t1" name="Verify ease of search of words" line="22">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${QR_URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220926 00:01:39.463" level="INFO">Opening browser 'chrome' to base url 'https://www.nairaland.com/'.</msg>
+<msg timestamp="20220926 00:01:54.305" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220926 00:01:54.306" level="FAIL">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D7DF13+2219795]
+	Ordinal0 [0x00D12841+1779777]
+	Ordinal0 [0x00C2423D+803389]
+	Ordinal0 [0x00C20A12+789010]
+	Ordinal0 [0x00C178FD+751869]
+	Ordinal0 [0x00C1853F+755007]
+	Ordinal0 [0x00C17B11+752401]
+	Ordinal0 [0x00C1706A+749674]
+	Ordinal0 [0x00C15F94+745364]
+	Ordinal0 [0x00C163FD+746493]
+	Ordinal0 [0x00C25A8E+809614]
+	Ordinal0 [0x00C7F87D+1177725]
+	Ordinal0 [0x00C6E7FC+1107964]
+	Ordinal0 [0x00C7F192+1175954]
+	Ordinal0 [0x00C6E616+1107478]
+	Ordinal0 [0x00C47F89+950153]
+	Ordinal0 [0x00C48F56+954198]
+	GetHandleVerifier [0x01072CB2+3040210]
+	GetHandleVerifier [0x01062BB4+2974420]
+	GetHandleVerifier [0x00E16A0A+565546]
+	GetHandleVerifier [0x00E15680+560544]
+	Ordinal0 [0x00D19A5C+1808988]
+	Ordinal0 [0x00D1E3A8+1827752]
+	Ordinal0 [0x00D1E495+1827989]
+	Ordinal0 [0x00D280A4+1867940]
+	BaseThreadInitThunk [0x75E8FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x778B7B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x778B7B2E+238]
+</msg>
+<status status="FAIL" starttime="20220926 00:01:39.460" endtime="20220926 00:01:55.867"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${search_field}</arg>
+<arg>${var_Mon}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 00:01:55.917" endtime="20220926 00:01:55.917"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${click_search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 00:01:55.918" endtime="20220926 00:01:55.918"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${first_highlight}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20220926 00:01:55.918" endtime="20220926 00:01:55.919"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220926 00:01:55.920" endtime="20220926 00:02:07.137"/>
+</kw>
+<doc>Opens browser and enters login page</doc>
+<tag>regression</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20220926 00:01:39.458" endtime="20220926 00:02:07.138">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00D7DF13+2219795]
+	Ordinal0 [0x00D12841+1779777]
+	Ordinal0 [0x00C2423D+803389]
+	Ordinal0 [0x00C20A12+789010]
+	Ordinal0 [0x00C178FD+751869]
+	Ordinal0 [0x00C1853F+755007]
+	Ordinal0 [0x00C17B11+752401]
+	Ordinal0 [0x00C1706A+749674]
+	Ordinal0 [0x00C15F94+745364]
+	Ordinal0 [0x00C163FD+746493]
+	Ordinal0 [0x00C25A8E+809614]
+	Ordinal0 [0x00C7F87D+1177725]
+	Ordinal0 [0x00C6E7FC+1107964]
+	Ordinal0 [0x00C7F192+1175954]
+	Ordinal0 [0x00C6E616+1107478]
+	Ordinal0 [0x00C47F89+950153]
+	Ordinal0 [0x00C48F56+954198]
+	GetHandleVerifier [0x01072CB2+3040210]
+	GetHandleVerifier [0x01062BB4+2974420]
+	GetHandleVerifier [0x00E16A0A+565546]
+	GetHandleVerifier [0x00E15680+560544]
+	Ordinal0 [0x00D19A5C+1808988]
+	Ordinal0 [0x00D1E3A8+1827752]
+	Ordinal0 [0x00D1E495+1827989]
+	Ordinal0 [0x00D280A4+1867940]
+	BaseThreadInitThunk [0x75E8FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x778B7B5E+286]
+	RtlGetAppContainerNamedObjectPath [0x778B7B2E+238]
+</status>
+</test>
+<doc>to check ease of search on Nairaland</doc>
+<status status="FAIL" starttime="20220926 00:01:38.136" endtime="20220926 00:02:07.153"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">regression</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="NL Check">NL Check</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
