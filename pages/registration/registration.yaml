@@ -1,0 +1,19 @@
+# url categorries
+naira_URL:                https://www.nairaland.com/
+
+# browser categories
+browser:                  ff
+
+# Locators
+search_field:             //b/following-sibling::form//input[@type='text' and @name='q']
+click_search:             //b/following-sibling::form//input[@type='submit']
+Num_2_page:               //label/following-sibling::input[@type='submit']
+
+registration_link:        //a[@href='/register']
+email_field:              //input[@name='email']
+submit_btn:               //input[@type='submit' and @value='Submit']
+invalid_message:          //h2[text()]
+
+# Text
+var_imm:                 immigrant
+invalid_email:            seyeKennygmail.in
