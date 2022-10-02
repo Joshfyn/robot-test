@@ -1,0 +1,11 @@
+Registration Functionality
+    # Precondition: 1. Open Browser
+    #               2. Navigate to the TaybullPay page
+    # Steps:
+    #               1. Go To Registration Page
+    #               2. Fill in Valid Full Name
+    #               3. Fill in Valid Email
+    #               4. Provide Strong Password
+    #               5  Click on Sign Up
+    # Expected Result
+    #   Opens a new page that contains "Verify your phone number with a code"

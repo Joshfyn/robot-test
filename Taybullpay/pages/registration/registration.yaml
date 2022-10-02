@@ -1,0 +1,8 @@
+# URL
+signup_locator:       "//a[@data-v-57cd022a and @href='/signup']"
+name_locator:         "//input[@name='fullname' and @type='text']"
+email_locator:        "//input[@name='username']"
+password_locator:     "//input[@name='password']"
+submit_locator:       "//button[@data-v-ada64224]"
+
+expected_locator:     "//h2[@data-v-68617711 and contains(text(), 'Verify your phone')]"
