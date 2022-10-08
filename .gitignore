@@ -6,6 +6,10 @@
 
 # ignore Services Store file for macOS
 .DS_Store/
+.DS_Store
 
 
-/result
+
+/NairaLand/result
+/Taybullpay/result
+/Taybullpay/.DS_Store
