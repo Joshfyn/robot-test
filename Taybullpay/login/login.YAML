@@ -1,0 +1,48 @@
+# Url categories
+website:             https://www.taybullpay.com/
+
+# Browser categories
+browser:              chrome
+
+
+# locators
+
+login_element:        //a[@href='/login']//div[@data-v-d600c2d2 and @class='v-list-item__title menu-list']
+email_field:          //input[@name='username' and @id='input-173']
+password_field:       //input[@name='password' and @id='password']
+signin_button:        //button[@type='submit']//span[@class='v-btn__content']
+alert_element:        //div[@class='v-alert__content']
+
+
+# Texts
+
+username:             outstandingmam@gmail.com
+password:             Olumi@1234
+invalid_message:      Invalid username or password
+
+
+*** Variables ***
+# Url categories
+${website}             https://www.taybullpay.com/
+
+# Browser categories
+${browser}              chrome
+
+
+# locators
+
+${global_element}       //span[@class='hamburger-box']
+${login_element}        //a[@href='/login']//div[@data-v-d600c2d2 and @class='v-list-item__title menu-list']
+${email_field}          //label[@for]/following-sibling::input[@name='username']
+${password_field}       //input[@name='password' and @type='password']
+${signin_button}        //button[@form='sign-in-form']//span[@class='v-btn__content']
+${alert_element}        //div[@class='v-alert__content']
+
+
+# Texts
+
+${username}             outstandingmam@gmail.com
+${password}             Olumi@1234
+${invalid_message}      Invalid username or password
+
+click element          ${global}

@@ -34,3 +34,54 @@ verify ease of login to user profile
 
   Test cases
 
+
+*** Variables ***
+# Url Categories
+${naira_url}              https://www.nairaland.com/
+
+# Browser categories
+${Browser}                chrome
+
+# Locators
+
+${search_field}        //table[@id='up']//td//form[@action='/search']//input[@type='text' and @name='q']
+${search_button}       //table[@id='up']//form[@action='/search']//input[@type='submit' and @value='Search']
+${user_field}          //input[@name='name' and @type='text']
+${password_field}      //input[@name='password' and @type='password']
+${login_link}          //a[@href='/login']
+${login_button}        //input[@type='submit' and @value='Login']
+${login_page}          //td[@class='grad']
+${user_locator}        //a[@href='/outstandingmam' and @class='user']
+${usernametext}        //a[text()='Outstandingmam']
+${search_field2}       //table[@id='up']//input[@type='text' and @size='32']
+
+# Text
+${search_item}         monarchy
+${username}            Outstandingmam
+${password}            olumi1234
+${search_item2}        immigrant
+
+# Timeout
+
+${timeout}             10
+
+
+
+
+
+*** Keywords ***
+Search an item
+  [Documentation]             To open browser and search
+  [Arguments]                 ${URL}    ${Browser}
+
+
+open browser         ${naira_url}   ${browser}
+  Input text           ${search_field}  ${search_item}
+  Click button         ${search_button}
+  Capture Page Screenshot
+
+ Click Element         ${login_link}
+  Input text           ${user_field}     ${username}
+  Input Password       ${password_field}  ${password}
+  Click Button         ${login_button}
+

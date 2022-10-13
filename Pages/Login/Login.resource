@@ -1,22 +1,28 @@
 *** Settings ***
-Documentation                      Keywords for Login test
-Library                            SeleniumLibrary
-
-
-*** Variables ***
-# URL categories
-${NL_URL}                          https://www.nairaland.com/
-
-# Browser categories
-${Browser}                         googlechrome
-
-# Locators
-${Click_login}                     //*[@id="up"]/tbody/tr/td/a[1]
+Documentation             Resources for testing nairaland login
+Library                   SeleniumLibrary
+Variables                 login.YAML
 
 
 *** Keywords ***
-Click to login
-   [Documentation]                To login username
-   [Arguments]                    ${URL}     ${Browser}     ${login_locator}
-   Open browser                   ${URL}     ${Browser}
-   Click element                  ${login_locator}
+Search an item
+   [Documentation]        open browser and search
+   [Arguments]            ${URL}   ${browser}  ${text_locator}  ${text}  ${search_locator}
+   open browser           ${URL}   ${browser}
+   input text             ${text_locator}  ${text}
+   Click Element          ${search_locator}
+
+Login with username
+   [Documentation]        login with a user name
+   [Arguments]            ${login_locator}  ${user_locator}  ${usertext}  ${password_locator}  ${passwordtext}  ${button_locator}
+   Click Element          ${login_locator}
+   Input text             ${user_locator}   ${usertext}
+   Input Password         ${password_locator}  ${passwordtext}
+   Click Button           ${button_locator}
+
+Search next item
+   [Documentation]        Search for a new item
+   [Arguments]            ${search2_locator}  ${text2}  ${searchbutton_locator}
+   Input text             ${search2_locator}  ${text2}
+   Click button           ${searchbutton_locator}
+

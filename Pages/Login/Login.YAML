@@ -1,0 +1,31 @@
+# Url Categories
+naira_url:           https://www.nairaland.com/
+
+# Browser categories
+browser:             chrome
+
+# Locators
+
+search_field:        //table[@id='up']//td//form[@action='/search']//input[@type='text' and @name='q']
+search_button:       //table[@id='up']//form[@action='/search']//input[@type='submit' and @value='Search']
+user_field:          //input[@name='name' and @type='text']
+password_field:      //input[@name='password' and @type='password']
+login_link:          //a[@href='/login']
+button_login:        //input[@type='submit' and @value='Login']
+login_page:          //td[@class='grad']
+user_locator:        //a[@href='/outstandingmam' and @class='user']
+usernametext:        //a[text()='Outstandingmam']
+search_field2:       //table[@id='up']//input[@type='text' and @size='32']
+
+# Text
+search_item:         monarchy
+username:            Outstandingmam
+password:            olumi1234
+search_item2:        immigrant
+
+# Timeout
+
+timeout:             10
+
+
+

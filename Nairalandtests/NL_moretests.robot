@@ -61,6 +61,10 @@ verify ease of login to user profile
   Click Element                   ${Click_search}
   Click Element                   ${edit_profile}
 
+ Input text           ${search_field2}   ${search_item2}
+  Click button         ${search_button}
+  Capture Page Screenshot
+
 
 
 
