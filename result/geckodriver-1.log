@@ -1,0 +1,16 @@
+1665257556482	geckodriver	INFO	Listening on 127.0.0.1:61430
+1665257557018	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "61431" "-foreground" "-no-remote" "-profile" "/var/folders/2t/z8mdgfcn375dkxz2525xxy8r0000gn/T/rust_mozprofileJbYPOg"
+1665257558126	Marionette	INFO	Marionette enabled
+2022-10-08 22:32:38.160 plugin-container[21198:974227] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-08 22:32:38.161 plugin-container[21198:974227] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665257558208	Marionette	INFO	Listening on port 61438
+WebDriver BiDi listening on ws://localhost:61431
+2022-10-08 22:32:38.238 plugin-container[21198:974227] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-08 22:32:38.238 plugin-container[21198:974227] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-08 22:32:38.239 plugin-container[21198:974249] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-08 22:32:38.239 plugin-container[21198:974249] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665257558485	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/2t/z8mdgfcn375dkxz2525xxy8r0000gn/T/rust_mozprofileJbYPOg/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61431/devtools/browser/44729500-8374-493f-8591-ac2b99d5548a
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://taybullpay.com"
+1665257564668	Marionette	INFO	Stopped listening on port 61438

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.10 on darwin)" generated="20221008 22:32:36.180" rpa="false" schemaversion="2">
+<suite id="s1" name="Registration" source="/Users/joshuaadeegbe/Documents/mytechbase_projects/robot-test/Taybullpay/tests/registration.robot">
+<test id="s1-t1" name="Verify That User Can Register Using A Valid Email">
+<kw name="Open Browser and Navigate To Home Page" library="common">
+<doc>Opens browser and navigates to taybulpay home page</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221008 22:32:36.448" level="INFO">Opening browser 'ff' to base url 'https://taybullpay.com/'.</msg>
+<msg timestamp="20221008 22:32:36.451" level="INFO">Firefox driver log is always forced to to: /Users/joshuaadeegbe/Documents/mytechbase_projects/robot-test/result/geckodriver-1.log</msg>
+<status status="PASS" starttime="20221008 22:32:36.448" endtime="20221008 22:32:43.929"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:36.447" endtime="20221008 22:32:43.930"/>
+</kw>
+<kw name="Navigate To Registration Page" library="registration">
+<doc>Navigates to registration page</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signup_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:43.934" level="INFO">Clicking element '//a[@data-v-57cd022a and @href='/signup']'.</msg>
+<status status="PASS" starttime="20221008 22:32:43.932" endtime="20221008 22:32:44.219"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:43.930" endtime="20221008 22:32:44.219"/>
+</kw>
+<kw name="Fill In Form Fields For Registration Page" library="registration">
+<arg>${fullName}</arg>
+<arg>${email_add}</arg>
+<arg>${password}</arg>
+<doc>fills in form field</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${name_locator}</arg>
+<arg>${full_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:44.220" level="INFO">Typing text 'Testing Collection' into text field '//input[@name='fullname' and @type='text']'.</msg>
+<status status="PASS" starttime="20221008 22:32:44.220" endtime="20221008 22:32:44.279"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_locator}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:44.280" level="INFO">Typing text 'notop65660@canyona.com' into text field '//input[@name='username']'.</msg>
+<status status="PASS" starttime="20221008 22:32:44.280" endtime="20221008 22:32:44.327"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password_locator}</arg>
+<arg>${pwd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:44.327" level="INFO">Typing password into text field '//input[@name='password']'.</msg>
+<msg timestamp="20221008 22:32:44.334" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221008 22:32:44.370" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221008 22:32:44.327" endtime="20221008 22:32:44.371"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:44.219" endtime="20221008 22:32:44.371"/>
+</kw>
+<kw name="Submit Form Field" library="registration">
+<doc>submits form field</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submit_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:44.372" level="INFO">Clicking button '//button[@data-v-ada64224]'.</msg>
+<status status="PASS" starttime="20221008 22:32:44.371" endtime="20221008 22:32:44.641"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:44.371" endtime="20221008 22:32:44.642"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${expected_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221008 22:32:44.642" endtime="20221008 22:32:44.664"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221008 22:32:44.665" endtime="20221008 22:32:45.304"/>
+</kw>
+<doc>Verifies user can register using valid email address</doc>
+<tag>regression</tag>
+<status status="PASS" starttime="20221008 22:32:36.447" endtime="20221008 22:32:45.305"/>
+</test>
+<test id="s1-t2" name="Verify That User Cannot Register Using An Incorrect Email Address">
+<kw name="Open Browser and Navigate To Home Page" library="common">
+<doc>Opens browser and navigates to taybulpay home page</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221008 22:32:45.307" level="INFO">Opening browser 'ff' to base url 'https://taybullpay.com/'.</msg>
+<msg timestamp="20221008 22:32:45.307" level="INFO">Firefox driver log is always forced to to: /Users/joshuaadeegbe/Documents/mytechbase_projects/robot-test/result/geckodriver-2.log</msg>
+<status status="PASS" starttime="20221008 22:32:45.306" endtime="20221008 22:32:51.043"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:45.306" endtime="20221008 22:32:51.043"/>
+</kw>
+<kw name="Navigate To Registration Page" library="registration">
+<doc>Navigates to registration page</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signup_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:51.045" level="INFO">Clicking element '//a[@data-v-57cd022a and @href='/signup']'.</msg>
+<status status="PASS" starttime="20221008 22:32:51.044" endtime="20221008 22:32:51.443"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:51.043" endtime="20221008 22:32:51.443"/>
+</kw>
+<kw name="Fill In Form Fields For Registration Page" library="registration">
+<arg>${fullName}</arg>
+<arg>${invalid_email_add}</arg>
+<arg>${password}</arg>
+<doc>fills in form field</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${name_locator}</arg>
+<arg>${full_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:51.444" level="INFO">Typing text 'Testing Collection' into text field '//input[@name='fullname' and @type='text']'.</msg>
+<status status="PASS" starttime="20221008 22:32:51.444" endtime="20221008 22:32:51.484"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_locator}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:51.485" level="INFO">Typing text 'notop65660canyona.com' into text field '//input[@name='username']'.</msg>
+<status status="PASS" starttime="20221008 22:32:51.484" endtime="20221008 22:32:51.528"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password_locator}</arg>
+<arg>${pwd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:51.529" level="INFO">Typing password into text field '//input[@name='password']'.</msg>
+<msg timestamp="20221008 22:32:51.535" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221008 22:32:51.571" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221008 22:32:51.528" endtime="20221008 22:32:51.571"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:51.443" endtime="20221008 22:32:51.571"/>
+</kw>
+<kw name="Submit Form Field" library="registration">
+<doc>submits form field</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submit_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:51.572" level="INFO">Clicking button '//button[@data-v-ada64224]'.</msg>
+<status status="PASS" starttime="20221008 22:32:51.572" endtime="20221008 22:32:51.816"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:51.571" endtime="20221008 22:32:51.816"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${failure_alert}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221008 22:32:51.817" endtime="20221008 22:32:51.836"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221008 22:32:51.837" endtime="20221008 22:32:52.501"/>
+</kw>
+<doc>Verifies user cannot register using an invalid email address</doc>
+<tag>regression</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20221008 22:32:45.305" endtime="20221008 22:32:52.501"/>
+</test>
+<test id="s1-t3" name="Verify That User Can Register Using A Single Email">
+<kw name="Open Browser and Navigate To Home Page" library="common">
+<doc>Opens browser and navigates to taybulpay home page</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221008 22:32:52.503" level="INFO">Opening browser 'ff' to base url 'https://taybullpay.com/'.</msg>
+<msg timestamp="20221008 22:32:52.504" level="INFO">Firefox driver log is always forced to to: /Users/joshuaadeegbe/Documents/mytechbase_projects/robot-test/result/geckodriver-3.log</msg>
+<status status="PASS" starttime="20221008 22:32:52.503" endtime="20221008 22:32:58.047"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:52.502" endtime="20221008 22:32:58.047"/>
+</kw>
+<kw name="Navigate To Registration Page" library="registration">
+<doc>Navigates to registration page</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signup_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:58.049" level="INFO">Clicking element '//a[@data-v-57cd022a and @href='/signup']'.</msg>
+<status status="PASS" starttime="20221008 22:32:58.049" endtime="20221008 22:32:58.567"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:58.048" endtime="20221008 22:32:58.567"/>
+</kw>
+<kw name="Fill In Form Fields For Registration Page II" library="registration">
+<arg>&amp;{form_action}</arg>
+<doc>fills in form field</doc>
+<for flavor="IN">
+<var>${Key_locator}</var>
+<var>${Value_data}</var>
+<value>&amp;{actions}</value>
+<iter>
+<var name="${Key_locator}">//input[@name='fullname' and @type='text']</var>
+<var name="${Value_data}">Testing Collection 2</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Key_locator}</arg>
+<arg>${Value_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:58.569" level="INFO">Typing text 'Testing Collection 2' into text field '//input[@name='fullname' and @type='text']'.</msg>
+<status status="PASS" starttime="20221008 22:32:58.569" endtime="20221008 22:32:58.608"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:58.568" endtime="20221008 22:32:58.608"/>
+</iter>
+<iter>
+<var name="${Key_locator}">//input[@name='username']</var>
+<var name="${Value_data}">notop65660@canyona.com</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Key_locator}</arg>
+<arg>${Value_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:58.609" level="INFO">Typing text 'notop65660@canyona.com' into text field '//input[@name='username']'.</msg>
+<status status="PASS" starttime="20221008 22:32:58.608" endtime="20221008 22:32:58.655"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:58.608" endtime="20221008 22:32:58.655"/>
+</iter>
+<iter>
+<var name="${Key_locator}">//input[@name='password']</var>
+<var name="${Value_data}">testingMytechBase</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Key_locator}</arg>
+<arg>${Value_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:58.656" level="INFO">Typing text 'testingMytechBase' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20221008 22:32:58.655" endtime="20221008 22:32:58.694"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:58.655" endtime="20221008 22:32:58.694"/>
+</iter>
+<status status="PASS" starttime="20221008 22:32:58.568" endtime="20221008 22:32:58.694"/>
+</for>
+<status status="PASS" starttime="20221008 22:32:58.568" endtime="20221008 22:32:58.695"/>
+</kw>
+<kw name="Submit Form Field" library="registration">
+<doc>submits form field</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submit_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221008 22:32:58.696" level="INFO">Clicking button '//button[@data-v-ada64224]'.</msg>
+<status status="PASS" starttime="20221008 22:32:58.695" endtime="20221008 22:32:58.965"/>
+</kw>
+<status status="PASS" starttime="20221008 22:32:58.695" endtime="20221008 22:32:58.965"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${expected_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221008 22:32:58.965" endtime="20221008 22:32:58.980"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221008 22:32:58.981" endtime="20221008 22:32:59.618"/>
+</kw>
+<doc>Verifies user can register using valid email address II</doc>
+<tag>regression</tag>
+<status status="PASS" starttime="20221008 22:32:52.502" endtime="20221008 22:32:59.619"/>
+</test>
+<doc>Test cases collection for conversion functionality</doc>
+<status status="PASS" starttime="20221008 22:32:36.183" endtime="20221008 22:32:59.620"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Registration">Registration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
