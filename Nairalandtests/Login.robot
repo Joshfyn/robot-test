@@ -22,7 +22,9 @@ Next login with user name
 Now search for the next item
   [Documentation]      input search item and click search
   [Tags]               smoke
-  Search next item     ${search_field2}   ${search_item2}   ${search_button}
+  Search next item     ${search_field2}  ${search_item2}  ${search_button}  Timeout=${timeout}
+  Clear Element Text   ${search_field3}
+
 
 
 
